@@ -1,0 +1,38 @@
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Database and user data
+*.db
+*.sqlite
+*.sqlite3
+
+# Personal images and generated QR data
+Server/faces/
+Server/qr_images/
+Server/uploads/
+
+# Node.js / Expo
+node_modules/
+.expo/
+dist/
+web-build/
+
+# Build files
+build/
+*.log
+
+# OS and editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
