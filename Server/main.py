@@ -1,4 +1,5 @@
 from dashboard import router as dashboard_router, log_api
+from camera import router as camera_router
 from starlette.middleware.base import BaseHTTPMiddleware
 
 from datetime import datetime, timedelta
@@ -264,6 +265,7 @@ ensure_schema()
 app = FastAPI(title="Smart Door Server", version="2.0.0 InsightFace")
 
 app.include_router(dashboard_router)
+app.include_router(camera_router)
 
 def create_door_command(db: Session, command: str):
     cmd = db.query(DoorCommand).first()
